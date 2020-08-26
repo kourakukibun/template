@@ -1,7 +1,7 @@
 ## 開発環境
 本プロジェクトの開発環境は、主に以下を使用しています。
 - ファイル管理 : Github
-  - リポジトリ : https://github.com/kourakukibun/bsmo.git
+  - リポジトリ : https://github.com/kourakukibun/template.git
 - Node.js : バージョン10.15.0
 - パッケージマネージャー : Yarn
 - タスクマネージャー : gulp
