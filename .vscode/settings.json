@@ -1,0 +1,15 @@
+{
+    "pugbeautify.omitDiv": true,
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/dist/common/css"
+        }
+    ],
+    "editor.defaultFormatter": "EditorConfig.EditorConfig",
+    "editor.insertSpaces": false,
+    "[jade]": {
+        "editor.defaultFormatter": "ducfilan.pug-formatter"
+    },
+}

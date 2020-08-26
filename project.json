@@ -1,0 +1,10 @@
+{
+  "siteName": "サイト名",
+  "companyName": "会社名",
+  "description": "サイトの概要",
+  "keywords": "サイトのキーワード1, サイトのキーワード2",
+  "siteUrl": "http://example.com/",
+  "ogpImage": "http://example.com/assets/images/ogp.jpg",
+  "googleSiteVerification": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "facebookUrl": "https://www.facebook.com/XXXXXXXX"
+}

@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+@import "_base/variables";
+@import "_base/mixins";
+
+/* -----------------------------------------------------
+ * Layout
+ * -------------------------------------------------- */
+.l-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	padding-top: calcvw(80);
+	@include media-pc {
+		padding-top: 100px;
+	}
+	.is-menu-open & {
+		position: fixed;
+	}
+}
+
+.l-kv {
+	height: 200px;
+	@include media-pc {
+		height: 350px;
+	}
+}
+
+.l-breadcrumbs {
+	padding: calcvw(20);
+	@include media-pc {
+		padding: 10px;
+	}
+	ol {
+		@include remove-letterspace;
+		@include media-pc {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		li {
+			display: inline-block;
+			position: relative;
+			margin: 0 0 0 1.5em;
+			&:before {
+				content: '>';
+				position: absolute;
+				top: 50%;
+				left: -1em;
+				transform: translateY(-50%);
+			}
+			&:first-child {
+				margin: 0;
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.l-contents {
+	background-color: #fff;
+	min-width:320px;
+	flex-grow: 1;
+}
+
+.l-main {
+	&-inner {
+		padding: calcvw(20);
+		@include media-pc {
+			padding: 10px;
+		}
+		&.bg-01 {
+			background-color: #e4e4e4;
+		}
+		&.bg-02 {
+			background-color: #333;
+			color: #fff;
+		}
+	}
+}
+
+.l-section {
+	padding: calcvw(40) 0;
+	@include media-pc {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 40px 0;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@include h-common;
+	}
+	h1 {
+		@include h-1;
+	}
+	h2 {
+		@include h-2;
+	}
+	h3 {
+		@include h-3;
+	}
+	h4 {
+		@include h-4;
+	}
+	h5 {
+		@include h-5;
+	}
+	h6 {
+		@include h-6;
+	}
+	p {
+		@include p-common;
+	}
+	ul {
+		@include ul-common;
+	}
+	ol {
+		@include ol-common;
+	}
+	dl {
+		@include dl-common;
+	}
+}
+
+/* ----- l-info ----- */
+.l-info {
+	padding: 10px;
+	border: 1px solid #ccc;
+	&-inner { // .l-info-inner
+		display: flex;
+		justify-content: space-between;
+		margin: 10px 0 0;
+		&:first-child {
+			margin: 0;
+		}
+	}
+	&-date { // .l-info-date
+		width: 6em;
+	}
+	&-text { // .l-info-text
+		flex: 1;
+		width: 100%;
+		margin: 0 0 0 15px;
+	}
+}
+
+
+/* ----- Layout Sample ----- */
+.l-sample {
+	padding: calcvw(40) 0;
+	@include media-pc {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 40px 0;
+	}
+}

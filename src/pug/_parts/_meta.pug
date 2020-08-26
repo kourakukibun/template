@@ -1,0 +1,21 @@
+meta(charset="utf-8")
+meta(name="viewport" content="width=device-width,initial-scale=1")
+title= category == 'home' ? project.siteName : pageTitle + ' | ' + project.companyName
+meta(name="description",content= pageDescription ? pageDescription : project.description)
+meta(name="keywords", content= pageKeywords ? pageKeywords : project.keywords)
+if project.googleSiteVerification
+	meta(name="google-site-verification", content= project.googleSiteVerification)
+// [ OGP ]
+meta(property="og:type", content= category == 'home' ? 'website' : 'article')
+meta(property="og:site_name", content= project.siteName)
+meta(property="og:title", content= pageTitle ? pageTitle : project.siteName)
+meta(property="og:description", content= pageDescription ? pageDescription : project.description)
+meta(property="og:url", content= project.siteUrl)
+meta(property="og:image" content= project.ogpImage)
+meta(name="twitter:card", content="summary")
+meta(name="twitter:title", content= pageTitle ? pageTitle : project.siteName)
+meta(name="twitter:description", content= pageDescription ? pageDescription : project.description)
+meta(name="twitter:image" content= project.ogpImage)
+// /[ OGP ]
+meta(name="format-detection", content="telephone=no")
+link(rel="shortcut icon", type="image/vnd.microsoft.icon", href="favicon.ico")

@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/* -----------------------------------------------------
+ * Font
+ * -------------------------------------------------- */
+
+// Noto Sans JP サブセット
+// https://blog.jxck.io/entries/2016-03-14/web-font-noto-sans.html
+// @font-face {
+// 	font-family: "NotoSansCJKjp-Jxck";
+// 	font-style: normal;
+// 	font-weight: 400;
+// 	src: local("NotoSansCJKjp-Bold.otf"),
+// 	local("NotoSansJP-Bold.otf"),
+// 	url("/font/NotoSansCJKjp-Jxck-Regular.woff") format("woff");
+// }
+
+// @font-face {
+// 	font-family: "NotoSansCJKjp-Jxck";
+// 	font-style: normal;
+// 	font-weight: 700;
+// 	src: local("NotoSansCJKjp-Bold.otf"),
+// 	local("NotoSansJP-Bold.otf"),
+// 	url("/font/NotoSansCJKjp-Jxck-Bold.woff") format("woff");
+// }
+
+// Roboto
+@import url(//fonts.googleapis.com/css?family=Roboto:400,700,900);

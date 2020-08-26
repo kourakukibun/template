@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+@import "_base/variables";
+@import "_base/mixins";
+
+/* -----------------------------------------------------
+ * Header
+ * -------------------------------------------------- */
+.l-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: calcvw(80);
+	z-index: 10;
+	padding: calcvw(14);
+	border-bottom: 1px solid #ccc;
+	background: #ededed;
+	box-shadow: 0 3px 5px rgba(#000, 0.3);
+	@include media-pc {
+		height: 100px;
+		padding: 10px;
+	}
+
+	&-inner { // .l-header-inner
+		position: relative;
+		@include media-pc {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+	}
+
+	&-logo { // .l-header-logo
+		position: absolute;
+		top: 0;
+		left: 0;
+		a {
+			@include text-hidden;
+			display: block;
+			width: calcvw(200);
+			height: calcvw(50);
+			background: url(http://placehold.jp/3d4070/ffffff/200x50.png?text=%E3%83%AD%E3%82%B4) no-repeat 50% 50%;
+			background-size: contain;
+			@include media-pc {
+				width: 200px;
+				height: 50px;
+			}
+		}
+	}
+
+	&-toggle { // .l-header-toggle
+		@include none-appearance;
+		@include text-hidden;
+		display: block;
+		position: absolute;
+		top: calcvw(5);
+		right: calcvw(15);
+		width: calcvw(40);
+		height: calcvw(40);
+		z-index: 2;
+		background-image: url(../images/ico_bars_01.png), url(../images/ico_times_01.png);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: calcvw(40), 0;
+		transition: background-size 0.2s ease-in-out;
+		outline: none;
+		@include media-pc {
+			display: none;
+		}
+		.is-menu-open & {
+			background-size: 0, calcvw(40);
+		}
+	}
+
+	&-menu { // .l-header-menu
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		padding: calcvw(80) 0 0; // padding-top: l-headerの高さ分
+		@include media-pc {
+			display: block;
+			position: absolute;
+			top: 63px;
+			left: 0;
+			width: 100%;
+			padding: 0;
+		}
+		.is-menu-open & {
+			display: block;
+		}
+		&-inner { // .l-header-menu-inner
+			overflow: scroll;
+			height: 100%;
+			background-color: rgba(#000, 0.5);
+			@include media-pc {
+				overflow: visible;
+				background-color: transparent;
+			}
+		}
+	}
+
+	&-nav { // .l-header-nav
+		display: none;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		background: #f4f4f4;
+		@include media-pc {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin: 0;
+			background: transparent;
+		}
+		.is-menu-open & {
+			display: block;
+			height: auto;
+			padding: 0 0 1px;
+			@include media-pc {
+				.is-menu-open & {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	&-close { // .l-header-btn-close
+		display: none;
+		button {
+			@include none-appearance;
+			outline: none;
+		}
+
+		.is-menu-open & {
+			display: block;
+			margin: -1px 0 0;
+			padding: calcvw(50) 0;
+			background: #f4f4f4;
+			color: #000;
+			font-size: calcvw(30);
+			text-align: center;
+			button {
+				display: inline-block;
+				&:after {
+					content: '';
+					display: inline-block;
+					width: calcvw(25);
+					height: calcvw(30);
+					margin: calcvw(3) 0 0 calcvw(10);
+					background: url(../images/ico_times_01.png) no-repeat 0 0;
+					background-size: contain;
+					vertical-align: top;
+				}
+			}
+		}
+		@include media-pc {
+			display: none;
+			.is-menu-open & {
+				display: none;
+				margin: 0;
+			}
+		}
+	}
+}
+
+.mod-header-nav {
+	display: block;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0 calcvw(20);
+	background: #f4f4f4;
+	li {
+		display: block;
+		border-top: calcvw(2) solid #ccc;
+		&:first-child {
+			border: none;
+		}
+	}
+	a {
+		display: block;
+		position: relative;
+		padding: calcvw(24) calcvw(20) calcvw(26);
+		font-size: calcvw(34);
+		line-height: 1.4;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: calcvw(20);
+			width: calcvw(15);
+			height: calcvw(25);
+			margin: calcvw(-12) 0 0;
+			background: url(../images/ico_arrow_right_01.png) no-repeat 0 0;
+			background-size: contain;
+		}
+		br {
+			display: none;
+		}
+		span {
+			display: block;
+			color: $color-link;
+			font-size: calcvw(26);
+			font-weight: bold;
+			letter-spacing: 0.075em;
+		}
+	}
+	@include media-pc {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		padding: 0;
+		background: transparent;
+		li {
+			border: none;
+			&:before {
+				display: none;
+			}
+			&:first-child {
+				&:before {
+					display: none;
+				}
+			}
+			&.is-current {
+				a {
+					// pointer-events: none; // カレントをクリックさせない場合に指定
+					&:hover {
+						opacity: 1;
+					}
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						left: 0;
+						bottom: -8px;
+						width: 100%;
+						height: 2px;
+						background: $color-text;
+					}
+				}
+			}
+		}
+		a {
+			@include hover;
+			padding: 0;
+			color: $color-text;
+			font-size: 1.6rem;
+			font-weight: normal;
+			line-height: ceil-decimal((19 / 16), 1);
+			letter-spacing: 0.05em;
+			text-decoration: none;
+			&:before {
+				display: none;
+			}
+			br {
+				display: inline-block;
+			}
+			span {
+				margin: 0;
+				font-size: 1.4rem;
+				letter-spacing: 0;
+			}
+		}
+	}
+}

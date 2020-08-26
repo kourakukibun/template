@@ -1,0 +1,15 @@
+block variables
+doctype html
+html(lang="ja")
+	head
+		include /_parts/_meta.pug
+		link(rel="stylesheet", href="/assets/css/libs/libs.css")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap")
+		link(rel="stylesheet", href="/assets/css/style.css")
+
+	body
+		include /_parts/_header.pug
+
+		block contents
+
+		include /_parts/_script.pug

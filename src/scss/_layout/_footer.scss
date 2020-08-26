@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+@import "_base/variables";
+@import "_base/mixins";
+
+/* -----------------------------------------------------
+ * Footer
+ * -------------------------------------------------- */
+.l-footer {
+	position: relative;
+	margin: 40px 0 0;
+	padding: 10px;
+	background: #ededed;
+	&-nav { // .l-footer-nav
+		text-align: center;
+		li {
+			display: inline-block;
+			margin: 0 5px;
+		}
+	}
+	&-copyright { // .l-footer-copyright
+		font-size: 1.0rem;
+		text-align: right;
+	}
+}
+
+.mod-pagetop {
+	position: fixed;
+	right: calcvw(10);
+	bottom: calcvw(20);
+	z-index: 5;
+	transform: translateY(calcvw(500));
+	transition: transform 0.3s ease-in-out;
+	@include media-pc {
+		bottom: 20px;
+		right: 10px;
+	}
+	.is-pagetop-active & {
+		transform: translateY(0);
+	}
+	.is-pagetop-fixed & {
+		position: absolute;
+		top: calcvw(-90);
+		bottom: auto;
+		transition: none;
+		transform: translateY(0);
+		@include media-pc {
+			top: -50px; // フッターまでたどり着いた時に同じ場所にいるよう値を変更
+		}
+	}
+}
