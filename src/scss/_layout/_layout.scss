@@ -15,7 +15,9 @@
 		padding-top: 100px;
 	}
 	.is-menu-open & {
-		position: fixed;
+		@include media-sp {
+			position: fixed;
+		}
 	}
 }
 

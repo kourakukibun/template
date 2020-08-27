@@ -842,10 +842,6 @@ p:first-child {
 	padding-top: 10.66667vw;
 }
 
-.is-menu-open .l-wrapper {
-	position: fixed;
-}
-
 .l-kv {
 	height: 200px;
 }
@@ -1255,6 +1251,10 @@ p:first-child {
 
 	.is-br-sp-show {
 		display: inline-block !important;
+	}
+
+	.is-menu-open .l-wrapper {
+		position: fixed;
 	}
 }
 
