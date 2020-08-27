@@ -11,3 +11,10 @@
 		display: none;
 	}
 }
+
+.mod-parallax-bg {
+	.l-section {
+		position: relative;
+		z-index: 1;
+	}
+}

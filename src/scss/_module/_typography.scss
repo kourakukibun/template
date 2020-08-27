@@ -24,10 +24,16 @@
 	padding: 0 0 0 20px;
 	border-left: 4px solid #000;
 	font-size: 2.0rem;
+	.bg-02 & {
+		border-color: #fff;
+	}
 }
 @mixin h-3 {
 	border-bottom: 1px solid #000;
 	font-size: 1.8rem;
+	.bg-02 & {
+		border-color: #fff;
+	}
 }
 @mixin h-4 {
 	font-size: 1.6rem;

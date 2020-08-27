@@ -449,9 +449,17 @@ p:first-child {
 	font-size: 2.0rem;
 }
 
+.bg-02 .mod-heading2 {
+	border-color: #fff;
+}
+
 .mod-heading3 {
 	border-bottom: 1px solid #000;
 	font-size: 1.8rem;
+}
+
+.bg-02 .mod-heading3 {
+	border-color: #fff;
 }
 
 .mod-heading4 {
@@ -544,6 +552,11 @@ p:first-child {
 
 .mod-ac-target {
 	display: none;
+}
+
+.mod-parallax-bg .l-section {
+	position: relative;
+	z-index: 1;
 }
 
 /* =====================================================
@@ -898,6 +911,7 @@ p:first-child {
 .l-main-inner.bg-02 {
 	background-color: #333;
 	color: #fff;
+	text-shadow: 1px 1px 0 black;
 }
 
 .l-section {
@@ -935,9 +949,17 @@ p:first-child {
 	font-size: 2.0rem;
 }
 
+.bg-02 .l-section h2 {
+	border-color: #fff;
+}
+
 .l-section h3 {
 	border-bottom: 1px solid #000;
 	font-size: 1.8rem;
+}
+
+.bg-02 .l-section h3 {
+	border-color: #fff;
 }
 
 .l-section h4 {

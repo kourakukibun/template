@@ -181,5 +181,9 @@
       new APP.SetPageTop($(this));
     });
 
+    // パララックス
+    new Backpax('.mod-parallax-bg');
+    new Rellax('.mod-parallax-part');
+
   });
 })(window, jQuery);
