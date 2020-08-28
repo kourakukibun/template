@@ -381,7 +381,8 @@
       slidesToShow: 1,
       slidesToScroll: 1,
       infinite: false,
-      variableWidth: true
+      variableWidth: true,
+      swipeToSlide: true
     });
 
   });
