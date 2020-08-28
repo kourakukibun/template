@@ -568,7 +568,8 @@ p:first-child {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	width: 44vw;
+	height: 28.26667vw;
 	background: #ccc;
 	font-size: 2.4rem;
 }

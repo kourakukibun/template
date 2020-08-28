@@ -196,8 +196,7 @@
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 2,
-            variableWidth: false
+            slidesToShow: 2
           }
         }
       ]
