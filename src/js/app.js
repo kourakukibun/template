@@ -187,11 +187,20 @@
 
     // slick
     $('.mod-slider').slick({
-      slidesToShow: 1,
+      slidesToShow: 4,
       slidesToScroll: 1,
       infinite: false,
       variableWidth: true,
-      swipeToSlide: true
+      swipeToSlide: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            variableWidth: false
+          }
+        }
+      ]
     });
 
   });

@@ -68,6 +68,7 @@
 
 .l-main {
 	&-inner {
+		overflow: hidden;
 		padding: calcvw(20);
 		@include media-pc {
 			padding: 10px;

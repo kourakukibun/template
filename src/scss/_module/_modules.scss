@@ -9,18 +9,26 @@
 
 .mod-seminar {
 	&-inner {
+		@include media-pc {
+			margin: 0 20px 0 0;
+		}
 		span,
 		a {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: 180px;
-			height: 120px;
+			width: 100%;
 			background: #ccc;
 			font-size: 2.4rem;
+			@include media-pc {
+				width: 280px;
+				height: 180px;
+			}
 		}
 	}
 	.slick-list {
-		overflow: visible;
+		@include media-pc {
+			overflow: visible;
+		}
 	}
 }

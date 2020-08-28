@@ -568,14 +568,9 @@ p:first-child {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 180px;
-	height: 120px;
+	width: 100%;
 	background: #ccc;
 	font-size: 2.4rem;
-}
-
-.mod-seminar .slick-list {
-	overflow: visible;
 }
 
 /* =====================================================
@@ -920,6 +915,7 @@ p:first-child {
 }
 
 .l-main-inner {
+	overflow: hidden;
 	padding: 2.66667vw;
 }
 
@@ -1117,6 +1113,20 @@ p:first-child {
 
 	.is-br-pc-show {
 		display: inline-block !important;
+	}
+
+	.mod-seminar-inner {
+		margin: 0 20px 0 0;
+	}
+
+	.mod-seminar-inner span,
+  .mod-seminar-inner a {
+		width: 280px;
+		height: 180px;
+	}
+
+	.mod-seminar .slick-list {
+		overflow: visible;
 	}
 
 	.l-header {
