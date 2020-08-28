@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+@import "_base/variables";
+@import "_base/mixins";
+
+/* -----------------------------------------------------
+ * Modules
+ * -------------------------------------------------- */
+
+.mod-seminar {
+	&-inner {
+		span,
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 180px;
+			height: 120px;
+			background: #ccc;
+			font-size: 2.4rem;
+		}
+	}
+	.slick-list {
+		overflow: visible;
+	}
+}

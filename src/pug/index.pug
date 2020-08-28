@@ -63,6 +63,15 @@ block contents
 					li List Item 2
 					li List Item 3
 
+		.l-main-inner
+			.l-section
+				h2 slick
+				.mod-seminar.mod-slider
+					- for (var i = 0; i < 30; i++)
+						.mod-seminar-inner.mod-slider-inner
+							a(href="dummy") #{i+1}
+
+
 		.l-main-inner.bg-01
 			.l-sample
 				h1.mod-heading1 .mod-Heading1 : l-setion以外で同スタイルを使用したい場合など

@@ -185,5 +185,13 @@
     new Backpax('.mod-parallax-bg');
     new Rellax('.mod-parallax-part');
 
+    // slick
+    $('.mod-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: false,
+      variableWidth: true
+    });
+
   });
 })(window, jQuery);
