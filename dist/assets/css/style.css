@@ -814,7 +814,7 @@ p:first-child {
 
 .l-footer {
 	position: relative;
-	margin: 40px 0 0;
+	margin: auto 0 0;
 	padding: 10px;
 	background: #ededed;
 }
@@ -866,6 +866,8 @@ p:first-child {
 .l-wrapper {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
 	min-height: 100vh;
 	padding-top: 10.66667vw;
 }
