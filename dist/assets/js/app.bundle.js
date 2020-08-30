@@ -359,10 +359,19 @@
       if (!$(this).hasClass('no-scroll')) {
         var href = $(this).attr('href');
         var $target = $(href === '#' || href === '' ? 'html' : href);
-        $target.velocity('scroll', {
-          duration: 500,
-          easing: 'easeInOutQuad'
-        });
+
+        // - Velocity版
+        // - 他のjQueryの処理に影響を与えないが、スクロール時にポジションを維持できない問題あり
+        // $target.velocity('scroll', {
+        //   duration: 500,
+        //   easing: 'easeInOutQuad'
+        // });
+
+        // - jQuery版
+        // - 他のスクロール処理が重なると重くなることも
+        var pos = $target.offset().top;
+        $('body,html').animate({ scrollTop: pos }, 500, 'swing');
+
         return false;
       }
     });
