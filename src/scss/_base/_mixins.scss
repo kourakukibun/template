@@ -66,6 +66,12 @@
 	}
 }
 
+@mixin media-set($px) {
+	@media screen and (min-width: $break-point + 1) and (max-width: $px * 1px) {
+		@content;
+	}
+}
+
 @mixin media-print {
 	@media print {
 		@content;

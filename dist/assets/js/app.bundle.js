@@ -222,7 +222,7 @@
     that.$elm.on('click', function () {
       that.changeStatus();
     });
-    
+
     that.$closeBtn.on('click', function () {
       that.close();
       that.isOpen = !that.isOpen;
