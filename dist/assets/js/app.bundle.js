@@ -402,5 +402,10 @@
       ]
     });
 
+    // object-fit IE11対応
+    if ($('html').hasClass('ie11')) {
+      objectFitImages();
+    }
+
   });
 })(window, jQuery);
