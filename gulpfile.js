@@ -78,6 +78,9 @@ var relativePath, project;
 
 gulp.task('html', cb => {
   const getDataProject = getDataJson('./project.json');
+  var htmlOptions = {
+    indent_size: 0
+  };
   gulp.src([
     'src/pug/**/*.pug',
     '!src/pug/**/_*.pug'
@@ -98,6 +101,7 @@ gulp.task('html', cb => {
       },
     }))
     .pipe($.lineEndingCorrector(lineOptions))
+    .pipe($.htmlBeautify(htmlOptions))
     .pipe(gulp.dest('dist/'))
     .pipe($.htmlhint('htmlhintrc.json'))
     .pipe($.htmlhint.failReporter())
